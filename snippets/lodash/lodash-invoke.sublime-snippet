@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+invoke(${1:collection}, ${2:methodName}${3:, [arg]})
+]]></content>
+  <tabTrigger>invoke</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Invokes method named methodName on each element in collection. Returns array of results.</description>
+</snippet>

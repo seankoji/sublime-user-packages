@@ -1,0 +1,196 @@
+<snippet>
+    <content><![CDATA[import React from 'react';
+import ReactDOM from 'react-dom';
+import bacon from 'baconjs';
+import {get} from 'lodash';
+
+import {toHtml as renderToHtml} from 'fs-commons/lib/iso/render';
+import {page as pageBoot}  from 'fs-commons/lib/iso/boot';
+import {initialLaterOr} from 'fs-commons/lib/streams/helper';
+
+import {getMyStream, getMyOtherStream} from '../streams/data-streams';
+import MyComponentName from '../components/my-component-name';
+
+/**
+ * EXPIRY_SECONDS: How long this HTML snippet is valid for.
+ *     - Too low and FISO will require being rebuilt. Minimum 3 seconds.
+ *     - Too high and the data risks being out of data. Users may see stale data.
+ * @type {Number}
+ */
+const EXPIRY_SECONDS = 30;
+
+/**
+ * Constructor function
+ *
+ * set up any settings defaults here, like this.settings.mySetting = this.settings.mySetting || 123;
+ *
+ * @param {Element} element  DOM element where react should render
+ * @param {Object}  settings Widget settings, e.g. passed in from ESI url
+ * @return {undefined}
+ */
+function ${1:WIDGET_NAME}(element, settings) {
+    this.element  = element;
+    this.settings = settings;
+
+    /**
+     * Copy values from this.settings into this object, setting up any
+     * defaults along the way
+     * @type {Object}
+     */
+    this.config = {
+        a: this.settings.a || 'some default value', // set a default
+        b: get(this.settings, 'b.c.d.e', 'default value') // set a default from a nested object
+    };
+}
+
+/**
+ * Bootloader init on the client.
+ * Initial data is passed in from the page if available (from ISO)
+ * Close streams used by remove function later
+ *
+ * @param  {Object} initialData Data passed from ISO (e.g. via the DOM)
+ * @return {undefined}
+ */
+${1:WIDGET_NAME}.prototype.init = function (initialData = false) {
+    this.closeStreams = this.getData(initialData)
+        .onValue(this.render.bind(this));
+};
+
+/**
+ * Bootloader init for ISO
+ * @return {Promise} Gets data for iso, sets expiry so it can be cached
+ */
+${1:WIDGET_NAME}.prototype.initIso = function () {
+    return new Promise((resolve) => {
+        this.getData()
+            .onValue((data) => {
+                resolve({
+                    html      : this.render(data),
+                    expiresIn : EXPIRY_SECONDS * 1000 // milliseconds
+                });
+            });
+    });
+};
+
+/**
+ * Returns a stream with the data object, component and iso setup
+ *
+ * @param  {Boolean}    initialData , e.g. from the ISO render
+ * @return {Observable} Property with the data object, component and iso string
+ */
+${1:WIDGET_NAME}.prototype.initComponentStream = function (initialData = false) {
+    const data         = this.getData(initialData);
+    const reactElement = data.map((data) => <MyComponentName {...data.view} />);
+    const iso          = data.map('.iso');
+
+    return bacon.combineTemplate({data, reactElement, iso});
+};
+
+/**
+ * Most of your widget logic should go here. Sets up data for the component.
+ * Must return a single stream.
+ * If you have multiple streams, combine them all using bacon.combineTemplate.
+ *
+ * @param  {Object}     initialData Any starting data we have, e.g. from ISO render
+ * @return {Observable} Stream containing view & init settings
+ */
+${1:WIDGET_NAME}.prototype.getData = function (initialData) {
+    // By using `initialLaterOr`, if the initialData is available
+    // we will use that as the initial stream value. If not
+    // then the defined stream will be returned
+    let someDataStream = initialLaterOr(
+        initialData.someDataStream,
+        getMyStream({
+            arg1: this.config.a,
+            arg2: this.config.b
+        })
+            .filter((streamData) => streamData != null) // filtering
+            .map((streamData) => {
+                // Do some data transformation
+                streamData.id = Number(streamData.id);
+
+                return streamData;
+            }) // chain more stuff
+    );
+
+    // FlatmapLatest to copy a stream and match data against another API
+    let otherDataStream = someDataStream.flatMapLatest((someDataStreamData) => {
+        // Inside here we can access the data
+        return getMyOtherStream({
+            id: someDataStreamData.id
+        });
+    });
+
+    return bacon.combineTemplate({
+        // Saved/Stored to the DOM for client boot
+        iso: bacon.combineTemplate({
+            data      : someDataStream,
+            otherData : otherDataStream
+        }),
+
+        // Send to React to build View
+        view: bacon.combineTemplate({
+            reactOnlyField : this.config.b, // the payloads can differ between iso/view if need be
+            data           : someDataStream,
+            otherData      : otherDataStream
+        })
+    // }).doLog('Use doLog to see debug information of bacon streams')
+    });
+};
+
+/**
+ * Maps the data from getData into react object or creates html string
+ *
+ * @param  {Object}     data    data from getData
+ * @return {undefined}
+ */
+${1:WIDGET_NAME}.prototype.render = function (data) {
+    if (this.element) {
+        ReactDOM.render(
+            <MyComponentName {...data.view} />,
+            this.element
+        );
+    } else {
+        return renderToHtml(
+            <MyComponentName {...data.view} />,
+            '${2:BOOTLOADER_NAME}',
+            {
+                settings : this.settings,
+                data     : data.iso
+            }
+        );
+    }
+};
+
+/**
+ * Removes the widget from the page and closes streams
+ *
+ * @return {undefined}
+ */
+${1:WIDGET_NAME}.prototype.remove = function () {
+    try {
+        this.closeStreams();
+    } catch (e) {} // eslint-disable-line no-empty
+
+    try {
+        if (this.element) {
+            ReactDOM.unmountComponentAtNode(this.element);
+        }
+    } catch (e) {} // eslint-disable-line no-empty
+};
+
+export default function (element, settings) {
+    return new ${1:WIDGET_NAME}(element, settings);
+}
+
+/**
+ * Calls the bootloader for the widget. The bootloader name is defined in fiso.js, e.g. 'video-mosaic'
+ */
+pageBoot(${1:WIDGET_NAME}, '${2:BOOTLOADER_NAME}');]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>fiso widget</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.js</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>FISO Widget</description>
+</snippet>

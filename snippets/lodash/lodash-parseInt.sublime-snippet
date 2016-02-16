@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+parseInt(${1:value}${2:, [radix]]})
+]]></content>
+  <tabTrigger>parseInt</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Converts the given value into an integer of the specified radix.</description>
+</snippet>

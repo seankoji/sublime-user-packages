@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+sample(${1:collection}${2:, [n]})
+]]></content>
+  <tabTrigger>sample</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Retrieves a random element or n random elements from a collection.</description>
+</snippet>

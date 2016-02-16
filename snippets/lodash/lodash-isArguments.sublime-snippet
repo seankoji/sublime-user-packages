@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+isArguments(${1:value})
+]]></content>
+  <tabTrigger>isArguments</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Checks if value is an arguments object.</description>
+</snippet>

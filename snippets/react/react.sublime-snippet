@@ -1,0 +1,36 @@
+<snippet>
+    <content><![CDATA[
+        import React from 'react';
+
+        export default class ${1:CLASSNAME} extends React.Component {
+            // constructor(props) {
+            //     super(props);
+            // }
+            // componentWillMount() {}
+            // componentDidMount() {}
+            // componentWillReceiveProps() {}
+            // shouldComponentUpdate() {}
+            // componentWillUpdate() {}
+            // componentDidUpdate() {}
+            // componentWillUnmount() {}
+
+            render() {
+                ${2:RENDER}
+            }
+        }
+
+        ${1:CLASSNAME}.defaultProps = {
+
+        }
+
+        ${1:CLASSNAME}.propTypes = {
+
+        }
+    ]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>React</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.js</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>React Class</description>
+</snippet>

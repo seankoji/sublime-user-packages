@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+compact(${1:array})
+]]></content>
+  <tabTrigger>compact</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Creates an array with all falsey values removed.</description>
+</snippet>

@@ -1,0 +1,15 @@
+[
+	{
+		"keys": ["ctrl+alt+a"], "command": "alignment",
+	},
+    {
+        "keys": ["ctrl+alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true}
+    },
+    {
+        "keys": ["ctrl+shift+c"], "command": "insert_snippet", "args": { "name": "Packages/User/snippets/generic/consolelog.sublime-snippet" }
+    },
+    {
+      "keys": ["f10"],
+      "command": "open_file_folder"
+    }
+]

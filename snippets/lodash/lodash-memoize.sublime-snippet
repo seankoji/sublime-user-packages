@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+memoize(${1:func}${2:, [resolver]}})
+]]></content>
+  <tabTrigger>memoize</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Creates a function that memoizes the result of func.</description>
+</snippet>

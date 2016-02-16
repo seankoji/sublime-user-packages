@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+compose(${1:[func]})
+]]></content>
+  <tabTrigger>compose</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Creates a function that is the composition of the provided functions, where each function consumes the return value of the function that follows.</description>
+</snippet>

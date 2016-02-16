@@ -1,0 +1,7 @@
+{
+    "default_libs": ["browser", "ecma6"],
+    "tern_argument_hints": true,
+    "tern_argument_completion": true,
+    "tern_output_style": "tooltip",
+    "syntax_scopes": "source.js"
+}

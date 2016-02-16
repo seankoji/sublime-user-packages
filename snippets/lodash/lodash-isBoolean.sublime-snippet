@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+isBoolean(${1:value})
+]]></content>
+  <tabTrigger>isBoolean</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Checks if value is a boolean value.</description>
+</snippet>

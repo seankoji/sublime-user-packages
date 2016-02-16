@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[React.PropTypes.func]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>React.PropTypes.func</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.js</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>React.PropTypes.func</description>
+</snippet>

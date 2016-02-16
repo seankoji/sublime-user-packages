@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+invert(${1:object})
+]]></content>
+  <tabTrigger>invert</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Creates an object composed of the inverted keys and values of the given object.</description>
+</snippet>

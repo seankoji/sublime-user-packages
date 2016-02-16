@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+initial(${1:array}${2:, [callback=1]}${3:, [thisArg]})
+]]></content>
+  <tabTrigger>initial</tabTrigger>
+  <!-- <scope>source.JavaScript</scope> -->
+  <description>Gets all but the last element or last n elements of an array.</description>
+</snippet>

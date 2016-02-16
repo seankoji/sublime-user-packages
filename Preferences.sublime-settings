@@ -1,0 +1,90 @@
+{
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html, source.js"
+		},
+		{
+			"characters": ".",
+			"selector": "source.js, source.scss"
+		},
+        {
+            "characters": "$",
+            "selector": "source.scss"
+        }
+	],
+	"auto_find_in_selection": true,
+	"binary_file_patterns":
+	[
+		".DS_Store",
+		"node_modules/",
+		"tmp/",
+		"*.scssc",
+		"*.png",
+		"*.psd",
+		"*.ai",
+		"*.min.js",
+		"dist/",
+		".sass-cache",
+		"reports/coverage/",
+		"reports/plato/"
+	],
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+    "caret_extra_bottom": 2,
+    "caret_extra_top": 2,
+    "caret_extra_width": 3,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/User/SublimeLinter/Base16 Ocean Dark (SL).tmTheme",
+	"copy_with_empty_selection": true,
+	"default_line_ending": "unix",
+	"detect_indentation": false,
+	"drag_text": false,
+	"draw_minimap_border": true,
+	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
+	"extract_sublime_package_ask_on_open": true,
+	"fade_fold_buttons": false,
+	"find_selected_text": true,
+	"findreplace_small": true,
+	"font_face": "Ubuntu Mono",
+	"font_options":
+	[
+		"no_round"
+	],
+	"font_size": 14,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"CSS",
+		"Emmet",
+		"SublimeCodeIntel",
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"match_brackets_content": false,
+	"match_selection": true,
+	"match_tags": false,
+	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"show_full_path": false,
+	"sidebar_font_big": true,
+	"sidebar_xsmall": true,
+	"tab_size": 4,
+	"tabs_small": true,
+	"theme": "Cobalt2.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false,
+    "wide_caret" : true
+}
