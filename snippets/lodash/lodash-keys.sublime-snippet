@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-keys(${1:object})
-]]></content>
-  <tabTrigger>keys</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Creates an array composed of the own enumerable property names of an object.</description>
-</snippet>

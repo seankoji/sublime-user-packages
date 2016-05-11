@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-without(${1:array}${2:, [value]})
-]]></content>
-  <tabTrigger>without</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Creates an array excluding all provided values.</description>
-</snippet>

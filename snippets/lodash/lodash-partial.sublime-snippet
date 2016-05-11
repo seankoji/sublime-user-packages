@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-partial(${1:func}${2:, [arg]})
-]]></content>
-  <tabTrigger>partial</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Creates a function that, when called, invokes func with any additional partial arguments prepended to those provided to the new function. </description>
-</snippet>

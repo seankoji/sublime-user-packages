@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-merge(${1:object}${2:, [source]}${3:, [callback]}${4:, [thisArg]})
-]]></content>
-  <tabTrigger>merge</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Recursively merges own enumerable properties of the source object(s), that don't resolve to undefined into the destination object.</description>
-</snippet>

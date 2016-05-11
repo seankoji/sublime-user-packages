@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-toArray(${1:collection})
-]]></content>
-  <tabTrigger>toArray</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Converts the collection to an array.</description>
-</snippet>

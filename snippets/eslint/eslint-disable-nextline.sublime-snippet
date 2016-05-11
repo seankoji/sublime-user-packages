@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[// eslint-disable-next-line ${1:RULENAME}]]></content>
+    <tabTrigger>eslint disable line</tabTrigger>
+    <scope>source.js</scope>
+    <description>Disable eslint for a single line</description>
+</snippet>

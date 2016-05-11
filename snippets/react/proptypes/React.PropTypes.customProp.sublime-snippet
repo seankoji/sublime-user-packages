@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[function(props, propName, componentName) {
+      if (!/matchme/.test(props[propName])) {
+        return new Error('Validation failed!');
+      }
+    }
+]]></content>
+    <!-- Optional: Tab trigger to activate the snippet -->
+    <tabTrigger>React.PropTypes.customProp</tabTrigger>
+    <!-- Optional: Scope the tab trigger will be active in -->
+    <scope>source.js</scope>
+    <!-- Optional: Description to show in the menu -->
+    <description>React.PropTypes.customProp</description>
+</snippet>

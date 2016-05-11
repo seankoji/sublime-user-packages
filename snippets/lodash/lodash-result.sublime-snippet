@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-result(${1:object}, ${2:property})
-]]></content>
-  <tabTrigger>result</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Resolves the value of property on object.</description>
-</snippet>

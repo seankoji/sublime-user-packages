@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-isNull(${1:value})
-]]></content>
-  <tabTrigger>isNull</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Checks if value is null.</description>
-</snippet>

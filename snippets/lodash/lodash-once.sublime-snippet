@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-once(${1:func})
-]]></content>
-  <tabTrigger>once</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Creates a function that is restricted to execute func once.</description>
-</snippet>

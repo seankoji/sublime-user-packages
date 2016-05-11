@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-size(${1:collection})
-]]></content>
-  <tabTrigger>size</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Gets the size of the collection by returning collection.length.</description>
-</snippet>

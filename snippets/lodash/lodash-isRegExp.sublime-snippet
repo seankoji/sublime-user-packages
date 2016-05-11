@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-isRegExp(${1:value})
-]]></content>
-  <tabTrigger>isRegExp</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Checks if value is a regular expression.</description>
-</snippet>

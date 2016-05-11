@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-difference(${1:array}, ${2:array})
-]]></content>
-  <tabTrigger>difference</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Creates array excluding all values of provided arrays.</description>
-</snippet>

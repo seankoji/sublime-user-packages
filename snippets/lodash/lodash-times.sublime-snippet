@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-times(${1:n}, ${2:callback}${3:, [thisArg]})
-]]></content>
-  <tabTrigger>times</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Executes the callback n times, returning an array of the results of each callback execution.</description>
-</snippet>

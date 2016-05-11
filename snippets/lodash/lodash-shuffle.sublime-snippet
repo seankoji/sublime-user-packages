@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-shuffle(${1:collection})
-]]></content>
-  <tabTrigger>shuffle</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Creates an array of shuffled values, using a version of the Fisher-Yates shuffle.</description>
-</snippet>

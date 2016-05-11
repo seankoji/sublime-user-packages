@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-pull(${1:array}${2:, [value]})
-]]></content>
-  <tabTrigger>pull</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Removes all provided values from the given array.</description>
-</snippet>

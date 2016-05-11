@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-findLast(${1:collection}${2:, [callback=identity]}${3:, [thisArg]})
-]]></content>
-  <tabTrigger>findLast</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Iterates over elements of a collection from right to left, returning the first element that the callback returns truey for.</description>
-</snippet>

@@ -9,7 +9,14 @@
         "keys": ["ctrl+shift+c"], "command": "insert_snippet", "args": { "name": "Packages/User/snippets/generic/consolelog.sublime-snippet" }
     },
     {
+        "keys": ["ctrl+shift+c", "ctrl+shift+c"], "command": "insert_snippet_var", "args": { "name": "Packages/User/snippets/generic/consolelogVar.sublime-snippet" }
+    },
+    {
       "keys": ["f10"],
       "command": "open_file_folder"
+    },
+    {
+        "keys": ["ctrl+alt+p"],
+        "command": "prompt_select_workspace"
     }
 ]

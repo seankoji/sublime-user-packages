@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-isUndefined(${1:value})
-]]></content>
-  <tabTrigger>isUndefined</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Checks if value is undefined.</description>
-</snippet>

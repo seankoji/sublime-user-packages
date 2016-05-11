@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-assign(${1:object}${2:, [source]}${3:, [callback]}${4:, [thisArg]})
-]]></content>
-  <tabTrigger>assign</tabTrigger>
-  <!-- <scope>source.JavaScript</scope> -->
-  <description>Assigns own properties of source to object.</description>
-</snippet>
